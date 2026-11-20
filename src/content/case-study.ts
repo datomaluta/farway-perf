@@ -67,7 +67,7 @@ export const steps: Step[] = [
     commit: "4cf0413",
     problem:
       "The page shipped an empty shell and a spinner. Stories arrived from /api/stories only after React had loaded and run, so the browser couldn't even discover the cover image until then.",
-    fix: "The home and story pages are now static HTML built at deploy time, with the cover image and its preload hint in the first response. The stories API is gone. First Contentful Paint got later on paper, because the first paint used to be an empty header and a spinner; now it is the real page.",
+    fix: "The home and story pages are now static HTML built at deploy time, with the cover image and its preload hint in the first response. The stories API is gone. This also removed the big desktop layout shift (CLS 0.93), which came from the spinner being swapped for the content. First Contentful Paint got later on paper, because the first paint used to be an empty header and a spinner; now it is the real page.",
   },
   {
     id: "03-next-font",
@@ -138,7 +138,7 @@ export const steps: Step[] = [
     title: "Render the promo bar on the server",
     commit: "08b2be4",
     problem:
-      "Once the content was server-rendered, the client-fetched announcement bar became visible: it appeared after load and pushed the whole page down.",
+      "The announcement bar was fetched on the client, so it appeared after the page had rendered and pushed everything below it down (CLS 0.07 on mobile).",
     fix: "The bar is part of the server HTML, with a tiny client component for the close button. No more layout shift.",
   },
   {
