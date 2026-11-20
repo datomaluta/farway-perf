@@ -13,6 +13,9 @@
   --accent-hover: #0a5649;
   --accent-ink: #ffffff;
   --ring: #0d6b5b;
+  --status-good: #0a7f4f;
+  --status-average: #b25f00;
+  --status-poor: #cc2f2a;
   color-scheme: light;
 }
 
@@ -27,6 +30,9 @@
   --accent-hover: #6fd3bd;
   --accent-ink: #062621;
   --ring: #4cc3aa;
+  --status-good: #3ccf8e;
+  --status-average: #f0a73a;
+  --status-poor: #ff6b63;
   color-scheme: dark;
 }
 
