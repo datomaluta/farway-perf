@@ -1,12 +1,10 @@
-"use client";
-
 import moment from "moment";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { notFound } from "next/navigation";
 
-import type { Story } from "@/content/stories";
+import { stories } from "@/content/stories";
 
 const guideIcons = {
   "getting-there": "fa-solid fa-route",
@@ -14,59 +12,24 @@ const guideIcons = {
   "when-to-go": "fa-regular fa-calendar",
 };
 
-export default function StoryPage() {
-  const { slug } = useParams<{ slug: string }>();
-  const [story, setStory] = useState<Story | null>(null);
-  const [more, setMore] = useState<Story[]>([]);
-  const [status, setStatus] = useState<"loading" | "ready" | "missing" | "error">("loading");
+export function generateStaticParams() {
+  return stories.map((story) => ({ slug: story.slug }));
+}
 
-  useEffect(() => {
-    fetch(`/api/stories/${slug}`)
-      .then((res) => {
-        if (res.status === 404) {
-          setStatus("missing");
-          return null;
-        }
-        if (!res.ok) throw new Error(res.statusText);
-        return res.json();
-      })
-      .then((data: Story | null) => {
-        if (!data) return;
-        setStory(data);
-        setStatus("ready");
-        document.title = `${data.title} | Farway`;
-        return fetch("/api/stories")
-          .then((res) => res.json())
-          .then((all: Story[]) => setMore(all.filter((s) => s.slug !== slug).slice(0, 3)));
-      })
-      .catch(() => setStatus("error"));
-  }, [slug]);
+export async function generateMetadata({
+  params,
+}: PageProps<"/stories/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const story = stories.find((s) => s.slug === slug);
+  if (!story) return {};
+  return { title: story.title, description: story.dek };
+}
 
-  if (status === "loading") {
-    return (
-      <div className="grid min-h-[70vh] place-items-center" role="status">
-        <i className="fa-solid fa-circle-notch fa-spin text-3xl text-accent" aria-hidden="true" />
-        <span className="sr-only">Loading story…</span>
-      </div>
-    );
-  }
-
-  if (status !== "ready" || !story) {
-    return (
-      <div className="container-page grid min-h-[60vh] place-content-center text-center">
-        <p className="kicker">{status === "missing" ? "Off the map" : "Something went wrong"}</p>
-        <h1 className="mt-2 font-display text-3xl font-bold">
-          {status === "missing" ? "We couldn't find that story." : "The story didn't load."}
-        </h1>
-        <Link
-          href="/"
-          className="mx-auto mt-6 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-accent-ink"
-        >
-          Back to all stories
-        </Link>
-      </div>
-    );
-  }
+export default async function StoryPage({ params }: PageProps<"/stories/[slug]">) {
+  const { slug } = await params;
+  const story = stories.find((s) => s.slug === slug);
+  if (!story) notFound();
+  const more = stories.filter((s) => s.slug !== slug).slice(0, 3);
 
   return (
     <article>
@@ -142,37 +105,35 @@ export default function StoryPage() {
         </section>
       </div>
 
-      {more.length > 0 && (
-        <section aria-labelledby="more-title" className="container-page mt-20">
-          <h2 id="more-title" className="font-display text-3xl font-bold">
-            Keep reading
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {more.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/stories/${s.slug}`}
-                className="group overflow-hidden rounded-2xl bg-card ring-1 ring-line"
-              >
-                <Image
-                  src={s.image.src}
-                  alt={s.image.alt}
-                  width={s.image.width}
-                  height={s.image.height}
-                  sizes="(min-width: 768px) 30vw, 92vw"
-                  className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="p-5">
-                  <p className="text-xs font-semibold tracking-wider text-accent uppercase">
-                    {s.place}, {s.country}
-                  </p>
-                  <h3 className="mt-2 font-display text-xl font-bold">{s.title}</h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <section aria-labelledby="more-title" className="container-page mt-20">
+        <h2 id="more-title" className="font-display text-3xl font-bold">
+          Keep reading
+        </h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {more.map((s) => (
+            <Link
+              key={s.slug}
+              href={`/stories/${s.slug}`}
+              className="group overflow-hidden rounded-2xl bg-card ring-1 ring-line"
+            >
+              <Image
+                src={s.image.src}
+                alt={s.image.alt}
+                width={s.image.width}
+                height={s.image.height}
+                sizes="(min-width: 768px) 30vw, 92vw"
+                className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="p-5">
+                <p className="text-xs font-semibold tracking-wider text-accent uppercase">
+                  {s.place}, {s.country}
+                </p>
+                <h3 className="mt-2 font-display text-xl font-bold">{s.title}</h3>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
     </article>
   );
 }
