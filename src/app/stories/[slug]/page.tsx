@@ -66,7 +66,8 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
           alt={story.image.alt}
           width={story.image.width}
           height={story.image.height}
-          preload
+          loading="eager"
+          fetchPriority="high"
           sizes="(min-width: 1152px) 1088px, calc(100vw - 2rem)"
           className="h-auto w-full rounded-3xl"
         />

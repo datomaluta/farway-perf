@@ -13,7 +13,8 @@ export function Hero({ story }: { story: Story }) {
         src={story.image.src}
         alt={story.image.alt}
         fill
-        preload
+        loading="eager"
+        fetchPriority="high"
         sizes="100vw"
         className="object-cover"
       />
