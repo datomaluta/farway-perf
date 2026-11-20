@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "09-css-animations",
+  "runs": [
+    80,
+    192,
+    88,
+    72,
+    80
+  ],
+  "inp": 80,
+  "attribution": {
+    "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+    "type": "pointer",
+    "inputDelay": 1,
+    "processing": 41,
+    "presentation": 39
+  }
+}

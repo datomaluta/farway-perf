@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "08-css-carousel",
+  "form": "desktop",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T15:05:46.011Z",
+  "runs": [
+    100,
+    100,
+    100,
+    100,
+    99
+  ],
+  "score": 100,
+  "metrics": {
+    "fcp": 276,
+    "lcp": 811,
+    "tbt": 0,
+    "cls": 0.036,
+    "si": 441
+  },
+  "resources": {
+    "total": {
+      "requests": 37,
+      "bytes": 745970
+    },
+    "image": {
+      "requests": 11,
+      "bytes": 312928
+    },
+    "script": {
+      "requests": 9,
+      "bytes": 209073
+    },
+    "font": {
+      "requests": 3,
+      "bytes": 162365
+    },
+    "other": {
+      "requests": 12,
+      "bytes": 36623
+    },
+    "document": {
+      "requests": 1,
+      "bytes": 17447
+    },
+    "stylesheet": {
+      "requests": 1,
+      "bytes": 7534
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 0,
+      "bytes": 0
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "07-no-moment-lodash",
+  "runs": [
+    240,
+    240,
+    224,
+    232,
+    240
+  ],
+  "inp": 240,
+  "attribution": {
+    "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+    "type": "pointer",
+    "inputDelay": 1,
+    "processing": 176,
+    "presentation": 63
+  }
+}

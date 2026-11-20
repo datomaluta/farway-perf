@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "01-images",
+  "form": "mobile",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T14:39:07.654Z",
+  "runs": [
+    67,
+    69,
+    66,
+    71,
+    66
+  ],
+  "score": 67,
+  "metrics": {
+    "fcp": 915,
+    "lcp": 6119,
+    "tbt": 419,
+    "cls": 0.064,
+    "si": 2511
+  },
+  "resources": {
+    "total": {
+      "requests": 62,
+      "bytes": 2053978
+    },
+    "script": {
+      "requests": 15,
+      "bytes": 1211913
+    },
+    "font": {
+      "requests": 7,
+      "bytes": 380508
+    },
+    "image": {
+      "requests": 16,
+      "bytes": 267332
+    },
+    "stylesheet": {
+      "requests": 7,
+      "bytes": 96231
+    },
+    "document": {
+      "requests": 2,
+      "bytes": 79296
+    },
+    "other": {
+      "requests": 15,
+      "bytes": 18698
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 27,
+      "bytes": 1513733
+    }
+  }
+}

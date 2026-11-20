@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "09-css-animations",
+  "form": "mobile",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T15:08:28.807Z",
+  "runs": [
+    83,
+    89,
+    88,
+    90,
+    89
+  ],
+  "score": 89,
+  "metrics": {
+    "fcp": 1026,
+    "lcp": 3636,
+    "tbt": 53,
+    "cls": 0.067,
+    "si": 1026
+  },
+  "resources": {
+    "total": {
+      "requests": 36,
+      "bytes": 548335
+    },
+    "image": {
+      "requests": 10,
+      "bytes": 166921
+    },
+    "font": {
+      "requests": 3,
+      "bytes": 162365
+    },
+    "script": {
+      "requests": 9,
+      "bytes": 160337
+    },
+    "other": {
+      "requests": 12,
+      "bytes": 33252
+    },
+    "document": {
+      "requests": 1,
+      "bytes": 17818
+    },
+    "stylesheet": {
+      "requests": 1,
+      "bytes": 7642
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 0,
+      "bytes": 0
+    }
+  }
+}

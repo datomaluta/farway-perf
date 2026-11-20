@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "04-svg-icons",
+  "form": "mobile",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T14:50:16.897Z",
+  "runs": [
+    72,
+    78,
+    78,
+    78,
+    76
+  ],
+  "score": 78,
+  "metrics": {
+    "fcp": 2228,
+    "lcp": 4898,
+    "tbt": 115,
+    "cls": 0.067,
+    "si": 3151
+  },
+  "resources": {
+    "total": {
+      "requests": 56,
+      "bytes": 1882123
+    },
+    "script": {
+      "requests": 15,
+      "bytes": 1218265
+    },
+    "image": {
+      "requests": 16,
+      "bytes": 267332
+    },
+    "font": {
+      "requests": 5,
+      "bytes": 198182
+    },
+    "document": {
+      "requests": 2,
+      "bytes": 94184
+    },
+    "stylesheet": {
+      "requests": 5,
+      "bytes": 76402
+    },
+    "other": {
+      "requests": 13,
+      "bytes": 27758
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 20,
+      "bytes": 1149431
+    }
+  }
+}

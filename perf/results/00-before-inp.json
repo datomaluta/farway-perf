@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "00-before",
+  "runs": [
+    232,
+    200,
+    192,
+    376,
+    160
+  ],
+  "inp": 200,
+  "attribution": {
+    "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+    "type": "keyboard",
+    "inputDelay": 32,
+    "processing": 113,
+    "presentation": 55
+  }
+}

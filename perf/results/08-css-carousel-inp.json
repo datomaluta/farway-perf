@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "08-css-carousel",
+  "runs": [
+    200,
+    192,
+    224,
+    232,
+    192
+  ],
+  "inp": 200,
+  "attribution": {
+    "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+    "type": "keyboard",
+    "inputDelay": 0,
+    "processing": 99,
+    "presentation": 100
+  }
+}

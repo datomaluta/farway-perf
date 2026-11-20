@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "07-no-moment-lodash",
+  "form": "desktop",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T15:02:18.404Z",
+  "runs": [
+    99,
+    99,
+    99,
+    99,
+    99
+  ],
+  "score": 99,
+  "metrics": {
+    "fcp": 300,
+    "lcp": 875,
+    "tbt": 0,
+    "cls": 0.036,
+    "si": 476
+  },
+  "resources": {
+    "total": {
+      "requests": 39,
+      "bytes": 763860
+    },
+    "image": {
+      "requests": 11,
+      "bytes": 312928
+    },
+    "script": {
+      "requests": 9,
+      "bytes": 224108
+    },
+    "font": {
+      "requests": 4,
+      "bytes": 163482
+    },
+    "other": {
+      "requests": 12,
+      "bytes": 36667
+    },
+    "document": {
+      "requests": 1,
+      "bytes": 17854
+    },
+    "stylesheet": {
+      "requests": 2,
+      "bytes": 8821
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 0,
+      "bytes": 0
+    }
+  }
+}

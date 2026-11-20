@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "10-announcement-ssr",
+  "runs": [
+    72,
+    80,
+    72,
+    80,
+    64
+  ],
+  "inp": 72,
+  "attribution": {
+    "target": "button.bg-ink.font-medium.h-9.px-4.ring-1.ring-ink.rounded-full.text-bg.text-sm.transition-colors",
+    "type": "pointer",
+    "inputDelay": 1,
+    "processing": 30,
+    "presentation": 41
+  }
+}

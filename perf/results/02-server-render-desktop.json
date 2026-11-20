@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "02-server-render",
+  "form": "desktop",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T14:43:19.682Z",
+  "runs": [
+    97,
+    97,
+    96,
+    96,
+    97
+  ],
+  "score": 97,
+  "metrics": {
+    "fcp": 821,
+    "lcp": 1056,
+    "tbt": 0,
+    "cls": 0.036,
+    "si": 983
+  },
+  "resources": {
+    "total": {
+      "requests": 65,
+      "bytes": 2287831
+    },
+    "script": {
+      "requests": 15,
+      "bytes": 1220230
+    },
+    "image": {
+      "requests": 16,
+      "bytes": 460382
+    },
+    "font": {
+      "requests": 7,
+      "bytes": 380511
+    },
+    "stylesheet": {
+      "requests": 7,
+      "bytes": 96220
+    },
+    "document": {
+      "requests": 2,
+      "bytes": 92813
+    },
+    "other": {
+      "requests": 18,
+      "bytes": 37675
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 28,
+      "bytes": 1612659
+    }
+  }
+}

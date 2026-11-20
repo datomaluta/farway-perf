@@ -1,0 +1,19 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "04-svg-icons",
+  "runs": [
+    208,
+    176,
+    176,
+    216,
+    200
+  ],
+  "inp": 200,
+  "attribution": {
+    "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+    "type": "pointer",
+    "inputDelay": 3,
+    "processing": 129,
+    "presentation": 68
+  }
+}

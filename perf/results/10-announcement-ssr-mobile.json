@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "10-announcement-ssr",
+  "form": "mobile",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T15:12:05.141Z",
+  "runs": [
+    87,
+    91,
+    91,
+    91,
+    91
+  ],
+  "score": 91,
+  "metrics": {
+    "fcp": 948,
+    "lcp": 3568,
+    "tbt": 60,
+    "cls": 0,
+    "si": 975
+  },
+  "resources": {
+    "total": {
+      "requests": 34,
+      "bytes": 548157
+    },
+    "image": {
+      "requests": 10,
+      "bytes": 166921
+    },
+    "font": {
+      "requests": 3,
+      "bytes": 162365
+    },
+    "script": {
+      "requests": 9,
+      "bytes": 160218
+    },
+    "other": {
+      "requests": 10,
+      "bytes": 32912
+    },
+    "document": {
+      "requests": 1,
+      "bytes": 18099
+    },
+    "stylesheet": {
+      "requests": 1,
+      "bytes": 7642
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 0,
+      "bytes": 0
+    }
+  }
+}

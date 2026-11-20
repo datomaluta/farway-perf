@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "05-lazy-map",
+  "form": "desktop",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T14:55:00.323Z",
+  "runs": [
+    98,
+    99,
+    98,
+    99,
+    99
+  ],
+  "score": 99,
+  "metrics": {
+    "fcp": 689,
+    "lcp": 934,
+    "tbt": 0,
+    "cls": 0.036,
+    "si": 689
+  },
+  "resources": {
+    "total": {
+      "requests": 54,
+      "bytes": 2016446
+    },
+    "script": {
+      "requests": 14,
+      "bytes": 1173523
+    },
+    "image": {
+      "requests": 12,
+      "bytes": 440944
+    },
+    "font": {
+      "requests": 5,
+      "bytes": 198182
+    },
+    "document": {
+      "requests": 2,
+      "bytes": 93483
+    },
+    "stylesheet": {
+      "requests": 4,
+      "bytes": 72379
+    },
+    "other": {
+      "requests": 17,
+      "bytes": 37935
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 15,
+      "bytes": 1220999
+    }
+  }
+}

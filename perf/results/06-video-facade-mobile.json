@@ -1,0 +1,60 @@
+{
+  "url": "http://localhost:3100/",
+  "label": "06-video-facade",
+  "form": "mobile",
+  "lighthouseVersion": "13.6.0",
+  "fetchTime": "2026-11-20T14:58:10.884Z",
+  "runs": [
+    85,
+    84,
+    84,
+    84,
+    84
+  ],
+  "score": 84,
+  "metrics": {
+    "fcp": 1062,
+    "lcp": 4381,
+    "tbt": 83,
+    "cls": 0.067,
+    "si": 1742
+  },
+  "resources": {
+    "total": {
+      "requests": 36,
+      "bytes": 689051
+    },
+    "script": {
+      "requests": 9,
+      "bytes": 268142
+    },
+    "image": {
+      "requests": 10,
+      "bytes": 202972
+    },
+    "font": {
+      "requests": 4,
+      "bytes": 163482
+    },
+    "other": {
+      "requests": 10,
+      "bytes": 27771
+    },
+    "document": {
+      "requests": 1,
+      "bytes": 17863
+    },
+    "stylesheet": {
+      "requests": 2,
+      "bytes": 8821
+    },
+    "media": {
+      "requests": 0,
+      "bytes": 0
+    },
+    "third-party": {
+      "requests": 0,
+      "bytes": 0
+    }
+  }
+}

@@ -1,0 +1,1589 @@
+{
+  "steps": [
+    {
+      "id": "00-before",
+      "mobile": {
+        "score": 62,
+        "runs": [
+          62,
+          64,
+          61,
+          63,
+          59
+        ],
+        "metrics": {
+          "fcp": 911,
+          "lcp": 22226,
+          "tbt": 412,
+          "cls": 0,
+          "si": 4559
+        },
+        "resources": {
+          "total": {
+            "requests": 60,
+            "bytes": 7552941
+          },
+          "image": {
+            "requests": 13,
+            "bytes": 5771398
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1206386
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380508
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96284
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 79656
+          },
+          "other": {
+            "requests": 16,
+            "bytes": 18709
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 28,
+            "bytes": 1514136
+          }
+        }
+      },
+      "desktop": {
+        "score": 55,
+        "runs": [
+          56,
+          55,
+          55,
+          55,
+          55
+        ],
+        "metrics": {
+          "fcp": 249,
+          "lcp": 3850,
+          "tbt": 20,
+          "cls": 0.931,
+          "si": 1094
+        },
+        "resources": {
+          "total": {
+            "requests": 65,
+            "bytes": 7656529
+          },
+          "image": {
+            "requests": 13,
+            "bytes": 5867153
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1206385
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380496
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96215
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 79930
+          },
+          "other": {
+            "requests": 21,
+            "bytes": 26350
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 28,
+            "bytes": 1610133
+          }
+        }
+      },
+      "inp": {
+        "value": 200,
+        "runs": [
+          232,
+          200,
+          192,
+          376,
+          160
+        ],
+        "attribution": {
+          "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+          "type": "keyboard",
+          "inputDelay": 32,
+          "processing": 113,
+          "presentation": 55
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:34:57.798Z"
+    },
+    {
+      "id": "01-images",
+      "mobile": {
+        "score": 67,
+        "runs": [
+          67,
+          69,
+          66,
+          71,
+          66
+        ],
+        "metrics": {
+          "fcp": 915,
+          "lcp": 6119,
+          "tbt": 419,
+          "cls": 0.064,
+          "si": 2511
+        },
+        "resources": {
+          "total": {
+            "requests": 62,
+            "bytes": 2053978
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1211913
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380508
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 267332
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96231
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 79296
+          },
+          "other": {
+            "requests": 15,
+            "bytes": 18698
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 27,
+            "bytes": 1513733
+          }
+        }
+      },
+      "desktop": {
+        "score": 72,
+        "runs": [
+          71,
+          72,
+          93,
+          72,
+          72
+        ],
+        "metrics": {
+          "fcp": 253,
+          "lcp": 1302,
+          "tbt": 1,
+          "cls": 0.931,
+          "si": 1057
+        },
+        "resources": {
+          "total": {
+            "requests": 67,
+            "bytes": 2251685
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1211913
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 460383
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380491
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96221
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 80004
+          },
+          "other": {
+            "requests": 20,
+            "bytes": 22673
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 28,
+            "bytes": 1610157
+          }
+        }
+      },
+      "inp": {
+        "value": 200,
+        "runs": [
+          192,
+          192,
+          384,
+          208,
+          200
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 2,
+          "processing": 143,
+          "presentation": 55
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:39:07.654Z"
+    },
+    {
+      "id": "02-server-render",
+      "mobile": {
+        "score": 73,
+        "runs": [
+          73,
+          74,
+          73,
+          73,
+          61
+        ],
+        "metrics": {
+          "fcp": 2322,
+          "lcp": 5376,
+          "tbt": 218,
+          "cls": 0,
+          "si": 3084
+        },
+        "resources": {
+          "total": {
+            "requests": 60,
+            "bytes": 2081132
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1217633
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380512
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 267331
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96196
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 92128
+          },
+          "other": {
+            "requests": 13,
+            "bytes": 27332
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 27,
+            "bytes": 1513571
+          }
+        }
+      },
+      "desktop": {
+        "score": 97,
+        "runs": [
+          97,
+          97,
+          96,
+          96,
+          97
+        ],
+        "metrics": {
+          "fcp": 821,
+          "lcp": 1056,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 983
+        },
+        "resources": {
+          "total": {
+            "requests": 65,
+            "bytes": 2287831
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1220230
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 460382
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 380511
+          },
+          "stylesheet": {
+            "requests": 7,
+            "bytes": 96220
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 92813
+          },
+          "other": {
+            "requests": 18,
+            "bytes": 37675
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 28,
+            "bytes": 1612659
+          }
+        }
+      },
+      "inp": {
+        "value": 184,
+        "runs": [
+          184,
+          192,
+          176,
+          160,
+          200
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 129,
+          "presentation": 55
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:42:45.155Z"
+    },
+    {
+      "id": "03-next-font",
+      "mobile": {
+        "score": 69,
+        "runs": [
+          69,
+          69,
+          70,
+          69,
+          70
+        ],
+        "metrics": {
+          "fcp": 2346,
+          "lcp": 6255,
+          "tbt": 253,
+          "cls": 0.067,
+          "si": 3373
+        },
+        "resources": {
+          "total": {
+            "requests": 59,
+            "bytes": 2081798
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1217633
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 381316
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 267329
+          },
+          "stylesheet": {
+            "requests": 6,
+            "bytes": 95997
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 92312
+          },
+          "other": {
+            "requests": 13,
+            "bytes": 27211
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 23,
+            "bytes": 1350750
+          }
+        }
+      },
+      "desktop": {
+        "score": 97,
+        "runs": [
+          97,
+          97,
+          97,
+          97,
+          97
+        ],
+        "metrics": {
+          "fcp": 756,
+          "lcp": 1207,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 948
+        },
+        "resources": {
+          "total": {
+            "requests": 64,
+            "bytes": 2288331
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1220259
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 460403
+          },
+          "font": {
+            "requests": 7,
+            "bytes": 381319
+          },
+          "stylesheet": {
+            "requests": 6,
+            "bytes": 96003
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 92849
+          },
+          "other": {
+            "requests": 18,
+            "bytes": 37498
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 24,
+            "bytes": 1449728
+          }
+        }
+      },
+      "inp": {
+        "value": 184,
+        "runs": [
+          168,
+          208,
+          176,
+          184,
+          184
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 124,
+          "presentation": 59
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:46:46.867Z"
+    },
+    {
+      "id": "04-svg-icons",
+      "mobile": {
+        "score": 78,
+        "runs": [
+          72,
+          78,
+          78,
+          78,
+          76
+        ],
+        "metrics": {
+          "fcp": 2228,
+          "lcp": 4898,
+          "tbt": 115,
+          "cls": 0.067,
+          "si": 3151
+        },
+        "resources": {
+          "total": {
+            "requests": 56,
+            "bytes": 1882123
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1218265
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 267332
+          },
+          "font": {
+            "requests": 5,
+            "bytes": 198182
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 94184
+          },
+          "stylesheet": {
+            "requests": 5,
+            "bytes": 76402
+          },
+          "other": {
+            "requests": 13,
+            "bytes": 27758
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 20,
+            "bytes": 1149431
+          }
+        }
+      },
+      "desktop": {
+        "score": 98,
+        "runs": [
+          98,
+          98,
+          98,
+          98,
+          98
+        ],
+        "metrics": {
+          "fcp": 839,
+          "lcp": 990,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 839
+        },
+        "resources": {
+          "total": {
+            "requests": 61,
+            "bytes": 2085105
+          },
+          "script": {
+            "requests": 15,
+            "bytes": 1218265
+          },
+          "image": {
+            "requests": 16,
+            "bytes": 460406
+          },
+          "font": {
+            "requests": 5,
+            "bytes": 198182
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 93555
+          },
+          "stylesheet": {
+            "requests": 5,
+            "bytes": 76375
+          },
+          "other": {
+            "requests": 18,
+            "bytes": 38322
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 21,
+            "bytes": 1244531
+          }
+        }
+      },
+      "inp": {
+        "value": 200,
+        "runs": [
+          208,
+          176,
+          176,
+          216,
+          200
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 3,
+          "processing": 129,
+          "presentation": 68
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:50:16.897Z"
+    },
+    {
+      "id": "05-lazy-map",
+      "mobile": {
+        "score": 80,
+        "runs": [
+          71,
+          84,
+          79,
+          81,
+          80
+        ],
+        "metrics": {
+          "fcp": 2162,
+          "lcp": 4496,
+          "tbt": 117,
+          "cls": 0.067,
+          "si": 2165
+        },
+        "resources": {
+          "total": {
+            "requests": 51,
+            "bytes": 1812936
+          },
+          "script": {
+            "requests": 14,
+            "bytes": 1173692
+          },
+          "image": {
+            "requests": 12,
+            "bytes": 247869
+          },
+          "font": {
+            "requests": 5,
+            "bytes": 198182
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 93301
+          },
+          "stylesheet": {
+            "requests": 4,
+            "bytes": 72379
+          },
+          "other": {
+            "requests": 14,
+            "bytes": 27513
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 16,
+            "bytes": 1125229
+          }
+        }
+      },
+      "desktop": {
+        "score": 99,
+        "runs": [
+          98,
+          99,
+          98,
+          99,
+          99
+        ],
+        "metrics": {
+          "fcp": 689,
+          "lcp": 934,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 689
+        },
+        "resources": {
+          "total": {
+            "requests": 54,
+            "bytes": 2016446
+          },
+          "script": {
+            "requests": 14,
+            "bytes": 1173523
+          },
+          "image": {
+            "requests": 12,
+            "bytes": 440944
+          },
+          "font": {
+            "requests": 5,
+            "bytes": 198182
+          },
+          "document": {
+            "requests": 2,
+            "bytes": 93483
+          },
+          "stylesheet": {
+            "requests": 4,
+            "bytes": 72379
+          },
+          "other": {
+            "requests": 17,
+            "bytes": 37935
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 15,
+            "bytes": 1220999
+          }
+        }
+      },
+      "inp": {
+        "value": 192,
+        "runs": [
+          216,
+          192,
+          176,
+          200,
+          168
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 124,
+          "presentation": 66
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:54:36.788Z"
+    },
+    {
+      "id": "06-video-facade",
+      "mobile": {
+        "score": 84,
+        "runs": [
+          85,
+          84,
+          84,
+          84,
+          84
+        ],
+        "metrics": {
+          "fcp": 1062,
+          "lcp": 4381,
+          "tbt": 83,
+          "cls": 0.067,
+          "si": 1742
+        },
+        "resources": {
+          "total": {
+            "requests": 36,
+            "bytes": 689051
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 268142
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 202972
+          },
+          "font": {
+            "requests": 4,
+            "bytes": 163482
+          },
+          "other": {
+            "requests": 10,
+            "bytes": 27771
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17863
+          },
+          "stylesheet": {
+            "requests": 2,
+            "bytes": 8821
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 99,
+        "runs": [
+          99,
+          99,
+          99,
+          99,
+          99
+        ],
+        "metrics": {
+          "fcp": 293,
+          "lcp": 917,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 460
+        },
+        "resources": {
+          "total": {
+            "requests": 40,
+            "bytes": 808649
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 268142
+          },
+          "font": {
+            "requests": 4,
+            "bytes": 163482
+          },
+          "other": {
+            "requests": 13,
+            "bytes": 37413
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17863
+          },
+          "stylesheet": {
+            "requests": 2,
+            "bytes": 8821
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 224,
+        "runs": [
+          144,
+          296,
+          272,
+          200,
+          224
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 168,
+          "presentation": 55
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T14:58:10.884Z"
+    },
+    {
+      "id": "07-no-moment-lodash",
+      "mobile": {
+        "score": 85,
+        "runs": [
+          83,
+          86,
+          85,
+          86,
+          85
+        ],
+        "metrics": {
+          "fcp": 1063,
+          "lcp": 4126,
+          "tbt": 79,
+          "cls": 0.067,
+          "si": 1458
+        },
+        "resources": {
+          "total": {
+            "requests": 35,
+            "bytes": 644261
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 224108
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 202972
+          },
+          "font": {
+            "requests": 4,
+            "bytes": 163482
+          },
+          "other": {
+            "requests": 9,
+            "bytes": 27024
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17854
+          },
+          "stylesheet": {
+            "requests": 2,
+            "bytes": 8821
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 99,
+        "runs": [
+          99,
+          99,
+          99,
+          99,
+          99
+        ],
+        "metrics": {
+          "fcp": 300,
+          "lcp": 875,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 476
+        },
+        "resources": {
+          "total": {
+            "requests": 39,
+            "bytes": 763860
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 224108
+          },
+          "font": {
+            "requests": 4,
+            "bytes": 163482
+          },
+          "other": {
+            "requests": 12,
+            "bytes": 36667
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17854
+          },
+          "stylesheet": {
+            "requests": 2,
+            "bytes": 8821
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 240,
+        "runs": [
+          240,
+          240,
+          224,
+          232,
+          240
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 176,
+          "presentation": 63
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:01:48.775Z"
+    },
+    {
+      "id": "08-css-carousel",
+      "mobile": {
+        "score": 85,
+        "runs": [
+          84,
+          85,
+          87,
+          87,
+          85
+        ],
+        "metrics": {
+          "fcp": 913,
+          "lcp": 4110,
+          "tbt": 118,
+          "cls": 0.067,
+          "si": 913
+        },
+        "resources": {
+          "total": {
+            "requests": 35,
+            "bytes": 595506
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 209073
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 166921
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "other": {
+            "requests": 11,
+            "bytes": 32166
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17447
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7534
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 100,
+        "runs": [
+          100,
+          100,
+          100,
+          100,
+          99
+        ],
+        "metrics": {
+          "fcp": 276,
+          "lcp": 811,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 441
+        },
+        "resources": {
+          "total": {
+            "requests": 37,
+            "bytes": 745970
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 209073
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "other": {
+            "requests": 12,
+            "bytes": 36623
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17447
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7534
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 200,
+        "runs": [
+          200,
+          192,
+          224,
+          232,
+          192
+        ],
+        "attribution": {
+          "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+          "type": "keyboard",
+          "inputDelay": 0,
+          "processing": 99,
+          "presentation": 100
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:05:24.409Z"
+    },
+    {
+      "id": "09-css-animations",
+      "mobile": {
+        "score": 89,
+        "runs": [
+          83,
+          89,
+          88,
+          90,
+          89
+        ],
+        "metrics": {
+          "fcp": 1026,
+          "lcp": 3636,
+          "tbt": 53,
+          "cls": 0.067,
+          "si": 1026
+        },
+        "resources": {
+          "total": {
+            "requests": 36,
+            "bytes": 548335
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 166921
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160337
+          },
+          "other": {
+            "requests": 12,
+            "bytes": 33252
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17818
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7642
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 100,
+        "runs": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "metrics": {
+          "fcp": 275,
+          "lcp": 744,
+          "tbt": 0,
+          "cls": 0.036,
+          "si": 646
+        },
+        "resources": {
+          "total": {
+            "requests": 37,
+            "bytes": 698033
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160337
+          },
+          "other": {
+            "requests": 12,
+            "bytes": 36943
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 17818
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7642
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 80,
+        "runs": [
+          80,
+          192,
+          88,
+          72,
+          80
+        ],
+        "attribution": {
+          "target": "button.font-semibold.hover:bg-surface.px-6.py-3.ring-1.ring-line.rounded-full.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 41,
+          "presentation": 39
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:08:28.807Z"
+    },
+    {
+      "id": "10-announcement-ssr",
+      "mobile": {
+        "score": 91,
+        "runs": [
+          87,
+          91,
+          91,
+          91,
+          91
+        ],
+        "metrics": {
+          "fcp": 948,
+          "lcp": 3568,
+          "tbt": 60,
+          "cls": 0,
+          "si": 975
+        },
+        "resources": {
+          "total": {
+            "requests": 34,
+            "bytes": 548157
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 166921
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160218
+          },
+          "other": {
+            "requests": 10,
+            "bytes": 32912
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18099
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7642
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 100,
+        "runs": [
+          100,
+          99,
+          100,
+          99,
+          100
+        ],
+        "metrics": {
+          "fcp": 267,
+          "lcp": 740,
+          "tbt": 0,
+          "cls": 0,
+          "si": 385
+        },
+        "resources": {
+          "total": {
+            "requests": 36,
+            "bytes": 698794
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 162365
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160218
+          },
+          "other": {
+            "requests": 11,
+            "bytes": 37542
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18099
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7642
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 72,
+        "runs": [
+          72,
+          80,
+          72,
+          80,
+          64
+        ],
+        "attribution": {
+          "target": "button.bg-ink.font-medium.h-9.px-4.ring-1.ring-ink.rounded-full.text-bg.text-sm.transition-colors",
+          "type": "pointer",
+          "inputDelay": 1,
+          "processing": 30,
+          "presentation": 41
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:12:05.141Z"
+    },
+    {
+      "id": "11-font-weights",
+      "mobile": {
+        "score": 91,
+        "runs": [
+          89,
+          91,
+          91,
+          92,
+          90
+        ],
+        "metrics": {
+          "fcp": 911,
+          "lcp": 3542,
+          "tbt": 48,
+          "cls": 0,
+          "si": 911
+        },
+        "resources": {
+          "total": {
+            "requests": 34,
+            "bytes": 507123
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 166921
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160218
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 121512
+          },
+          "other": {
+            "requests": 10,
+            "bytes": 32783
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18042
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7647
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 100,
+        "runs": [
+          100,
+          100,
+          100,
+          99,
+          100
+        ],
+        "metrics": {
+          "fcp": 254,
+          "lcp": 699,
+          "tbt": 0,
+          "cls": 0,
+          "si": 342
+        },
+        "resources": {
+          "total": {
+            "requests": 36,
+            "bytes": 657760
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160218
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 121512
+          },
+          "other": {
+            "requests": 11,
+            "bytes": 37413
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18042
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 7647
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 80,
+        "runs": [
+          80,
+          80,
+          88,
+          72,
+          80
+        ],
+        "attribution": {
+          "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+          "type": "keyboard",
+          "inputDelay": 0,
+          "processing": 32,
+          "presentation": 48
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:15:20.534Z"
+    }
+  ],
+  "live": null
+}
