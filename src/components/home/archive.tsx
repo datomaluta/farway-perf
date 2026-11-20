@@ -3,6 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import _ from "lodash";
 import moment from "moment";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -150,10 +151,11 @@ export function Archive({ stories }: { stories: Story[] }) {
                       <i className={guideIcons[entry.guide]} aria-hidden="true" />
                     </span>
                   ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       src={entry.story.image.src}
                       alt=""
+                      width={112}
+                      height={112}
                       className="size-20 shrink-0 rounded-xl object-cover sm:size-28"
                     />
                   )}

@@ -1,6 +1,7 @@
 "use client";
 
 import moment from "moment";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -84,8 +85,15 @@ export default function StoryPage() {
       </header>
 
       <figure className="container-page mt-10 max-w-6xl">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={story.image.src} alt={story.image.alt} className="h-auto w-full rounded-3xl" />
+        <Image
+          src={story.image.src}
+          alt={story.image.alt}
+          width={story.image.width}
+          height={story.image.height}
+          preload
+          sizes="(min-width: 1152px) 1088px, calc(100vw - 2rem)"
+          className="h-auto w-full rounded-3xl"
+        />
         <figcaption className="mt-3 text-center text-xs text-muted">
           Photo by{" "}
           <a
@@ -146,10 +154,12 @@ export default function StoryPage() {
                 href={`/stories/${s.slug}`}
                 className="group overflow-hidden rounded-2xl bg-card ring-1 ring-line"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={s.image.src}
                   alt={s.image.alt}
+                  width={s.image.width}
+                  height={s.image.height}
+                  sizes="(min-width: 768px) 30vw, 92vw"
                   className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="p-5">

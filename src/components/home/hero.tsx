@@ -2,17 +2,22 @@
 
 import { motion } from "framer-motion";
 import moment from "moment";
+import Image from "next/image";
 import Link from "next/link";
 
 import type { Story } from "@/content/stories";
 
 export function Hero({ story }: { story: Story }) {
   return (
-    <section
-      className="relative flex min-h-[78svh] items-end bg-cover bg-center text-white"
-      style={{ backgroundImage: `url(${story.image.src})` }}
-      aria-label="Cover story"
-    >
+    <section className="relative flex min-h-[78svh] items-end text-white" aria-label="Cover story">
+      <Image
+        src={story.image.src}
+        alt={story.image.alt}
+        fill
+        preload
+        sizes="100vw"
+        className="object-cover"
+      />
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10" />
       <motion.div
         className="relative container-page pt-32 pb-14 sm:pb-20"

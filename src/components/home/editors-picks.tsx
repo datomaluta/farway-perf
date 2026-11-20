@@ -1,6 +1,7 @@
 "use client";
 
 import moment from "moment";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Slider, { type CustomArrowProps } from "react-slick";
@@ -62,10 +63,12 @@ export function EditorsPicks({ stories }: { stories: Story[] }) {
             <div key={story.slug} className="px-2.5">
               <article className="group overflow-hidden rounded-2xl bg-card ring-1 ring-line">
                 <Link href={`/stories/${story.slug}`} className="block">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={story.image.src}
                     alt={story.image.alt}
+                    width={story.image.width}
+                    height={story.image.height}
+                    sizes="(min-width: 1280px) 400px, (min-width: 1024px) 31vw, (min-width: 640px) 47vw, 92vw"
                     className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="p-5">
