@@ -8,6 +8,7 @@
  * This script plays the same interactions a reader would (filter by region, type
  * a search, clear it, load more) on a mobile viewport with a 4x CPU slowdown, and
  * reads INP with Google's web-vitals library. It keeps the median of all runs.
+ * A Chrome window opens for each run.
  */
 import fs from "node:fs/promises";
 import { createRequire } from "node:module";
@@ -43,7 +44,13 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const executablePath = process.env.CHROME_PATH ?? chromeLauncher.Launcher.getInstallations()[0];
 
 async function measure() {
-  const browser = await puppeteer.launch({ executablePath, headless: true });
+  // Headed on purpose: headless Chrome reports late presentation times when the page is
+  // otherwise idle, which inflates INP by several hundred milliseconds.
+  const browser = await puppeteer.launch({
+    executablePath,
+    headless: false,
+    args: ["--window-size=500,950"],
+  });
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 412, height: 823, deviceScaleFactor: 1.75, isMobile: true });
