@@ -10,8 +10,19 @@ import { site } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
-const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat" });
+// Headings only use the bold cut, and the handwritten kickers are decorative,
+// so they are not preloaded and don't compete with the hero image.
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: "700",
+  variable: "--font-playfair",
+});
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-caveat",
+  preload: false,
+});
 
 export const metadata: Metadata = {
   title: { default: site.title, template: `%s | ${site.name}` },
