@@ -17,7 +17,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const story = stories.find((s) => s.slug === slug);
   if (!story) return {};
-  return { title: story.title, description: story.dek };
+  return {
+    title: story.title,
+    description: story.dek,
+    alternates: { canonical: `/stories/${story.slug}` },
+    openGraph: {
+      type: "article",
+      title: story.title,
+      description: story.dek,
+      publishedTime: story.publishedAt,
+      authors: [story.author],
+      images: [
+        {
+          url: story.image.src,
+          width: story.image.width,
+          height: story.image.height,
+          alt: story.image.alt,
+        },
+      ],
+    },
+  };
 }
 
 export default async function StoryPage({ params }: PageProps<"/stories/[slug]">) {
