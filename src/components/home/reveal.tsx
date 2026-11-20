@@ -1,8 +1,7 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-/** Fades a section in the first time it scrolls into view. */
+/**
+ * Fades a section in as it scrolls into view, using a CSS scroll-driven animation.
+ * Browsers without `animation-timeline` support simply show the section.
+ */
 export function Reveal({
   children,
   className,
@@ -15,16 +14,8 @@ export function Reveal({
   labelledBy?: string;
 }) {
   return (
-    <motion.section
-      id={id}
-      aria-labelledby={labelledBy}
-      className={className}
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6 }}
-    >
+    <section id={id} aria-labelledby={labelledBy} className={`reveal ${className ?? ""}`}>
       {children}
-    </motion.section>
+    </section>
   );
 }

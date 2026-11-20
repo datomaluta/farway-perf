@@ -1,11 +1,9 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
 import type { Story } from "@/content/stories";
 import { formatDate } from "@/lib/format";
+
 import { ArrowRightIcon } from "../icons";
 
 export function Hero({ story }: { story: Story }) {
@@ -20,12 +18,7 @@ export function Hero({ story }: { story: Story }) {
         className="object-cover"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-black/10" />
-      <motion.div
-        className="relative container-page pt-32 pb-14 sm:pb-20"
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="relative container-page animate-fade-up pt-32 pb-14 sm:pb-20">
         <p className="font-hand text-3xl text-white/90">Cover story</p>
         <h1 className="mt-2 max-w-3xl font-display text-4xl leading-[1.05] font-bold text-balance sm:text-6xl lg:text-7xl">
           {story.title}
@@ -41,7 +34,7 @@ export function Hero({ story }: { story: Story }) {
           Read the story
           <ArrowRightIcon />
         </Link>
-      </motion.div>
+      </div>
     </section>
   );
 }

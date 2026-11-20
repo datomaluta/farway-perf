@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -123,49 +122,40 @@ export function Archive({ stories }: { stories: Story[] }) {
           </button>
         </div>
       ) : (
-        <motion.ul layout className="mt-8 grid gap-4 md:grid-cols-2">
-          <AnimatePresence>
-            {shown.map((entry) => (
-              <motion.li
-                key={entry.key}
-                layout
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.25 }}
+        <ul className="mt-8 grid gap-4 md:grid-cols-2">
+          {shown.map((entry) => (
+            <li key={entry.key} className="animate-fade-in">
+              <Link
+                href={entry.href}
+                className="flex gap-4 rounded-2xl bg-card p-3 ring-1 ring-line transition-colors hover:bg-surface"
               >
-                <Link
-                  href={entry.href}
-                  className="flex gap-4 rounded-2xl bg-card p-3 ring-1 ring-line transition-colors hover:bg-surface"
-                >
-                  {entry.guide ? (
-                    <span className="grid size-20 shrink-0 place-items-center rounded-xl bg-surface text-2xl text-accent sm:size-28">
-                      <GuideIcon id={entry.guide} />
-                    </span>
-                  ) : (
-                    <Image
-                      src={entry.story.image.src}
-                      alt=""
-                      width={112}
-                      height={112}
-                      className="size-20 shrink-0 rounded-xl object-cover sm:size-28"
-                    />
-                  )}
-                  <div className="min-w-0 py-1">
-                    <p className="text-xs font-semibold tracking-wider text-accent uppercase">
-                      {entry.kind} · {entry.story.place}
-                    </p>
-                    <h3 className="mt-1 leading-snug font-semibold">{entry.title}</h3>
-                    <p className="mt-1 line-clamp-2 text-sm text-muted">{entry.summary}</p>
-                    <p className="mt-2 text-xs text-muted">
-                      {formatDate(entry.publishedAt)} · {entry.readMinutes} min read
-                    </p>
-                  </div>
-                </Link>
-              </motion.li>
-            ))}
-          </AnimatePresence>
-        </motion.ul>
+                {entry.guide ? (
+                  <span className="grid size-20 shrink-0 place-items-center rounded-xl bg-surface text-2xl text-accent sm:size-28">
+                    <GuideIcon id={entry.guide} />
+                  </span>
+                ) : (
+                  <Image
+                    src={entry.story.image.src}
+                    alt=""
+                    width={112}
+                    height={112}
+                    className="size-20 shrink-0 rounded-xl object-cover sm:size-28"
+                  />
+                )}
+                <div className="min-w-0 py-1">
+                  <p className="text-xs font-semibold tracking-wider text-accent uppercase">
+                    {entry.kind} · {entry.story.place}
+                  </p>
+                  <h3 className="mt-1 leading-snug font-semibold">{entry.title}</h3>
+                  <p className="mt-1 line-clamp-2 text-sm text-muted">{entry.summary}</p>
+                  <p className="mt-2 text-xs text-muted">
+                    {formatDate(entry.publishedAt)} · {entry.readMinutes} min read
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
 
       {matches.length > visible && (
