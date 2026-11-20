@@ -1,5 +1,5 @@
 export const promo = {
-  text: "New: our winter issue on slow trains and quiet coasts is out now.",
-  cta: "Read the issue",
-  href: "/stories/the-alps-by-rail",
+  text: "Farway is a demo site for a web performance case study.",
+  cta: "See how it got fast",
+  href: "/case-study",
 };
