@@ -160,7 +160,7 @@ export default function CaseStudyPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted">
           Farway started out like many sites I&apos;m asked to speed up: it looked fine, but it took{" "}
-          {formatMs(first.mobile.metrics.lcp)} to show its cover photo on a mid-range phone. Eleven
+          {formatMs(first.mobile.metrics.lcp)} to show its cover photo on a mid-range phone. Twelve
           focused changes later, the same page, with the same design and content, loads in{" "}
           {formatMs(last.mobile.metrics.lcp)}.
         </p>

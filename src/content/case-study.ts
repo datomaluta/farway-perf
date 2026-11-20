@@ -148,4 +148,13 @@ export const steps: Step[] = [
       "Since step 3, three variable font files with every weight were preloaded, competing with the cover image for bandwidth on slow connections.",
     fix: "The display face is loaded in bold only, and the decorative handwritten font is no longer preloaded.",
   },
+  {
+    id: "12-fetch-priority",
+    label: "Priority",
+    title: "Fetch the cover image first",
+    commit: "55fc1cd",
+    problem:
+      "PageSpeed Insights on the live site pointed out that the cover image, the LCP element, was requested at low priority. In Next.js 16 the preload prop adds a preload link but no fetchpriority hint.",
+    fix: 'fetchPriority="high" and eager loading on the cover images. The lab numbers stay within run-to-run noise (the simulated load is limited by bandwidth, not by request order), but on a real connection the browser now fetches the cover before the carousel photos, and the PageSpeed warning is gone.',
+  },
 ];

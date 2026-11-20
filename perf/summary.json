@@ -1583,6 +1583,138 @@
       },
       "lighthouseVersion": "13.6.0",
       "measuredAt": "2026-11-20T15:15:20.534Z"
+    },
+    {
+      "id": "12-fetch-priority",
+      "mobile": {
+        "score": 90,
+        "runs": [
+          90,
+          90,
+          90,
+          91,
+          91
+        ],
+        "metrics": {
+          "fcp": 933,
+          "lcp": 3555,
+          "tbt": 82,
+          "cls": 0,
+          "si": 933
+        },
+        "resources": {
+          "total": {
+            "requests": 34,
+            "bytes": 510773
+          },
+          "image": {
+            "requests": 10,
+            "bytes": 166921
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160296
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 121512
+          },
+          "other": {
+            "requests": 10,
+            "bytes": 34401
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18346
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 9297
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "desktop": {
+        "score": 99,
+        "runs": [
+          99,
+          99,
+          99,
+          99,
+          99
+        ],
+        "metrics": {
+          "fcp": 271,
+          "lcp": 894,
+          "tbt": 0,
+          "cls": 0,
+          "si": 432
+        },
+        "resources": {
+          "total": {
+            "requests": 37,
+            "bytes": 672068
+          },
+          "image": {
+            "requests": 11,
+            "bytes": 312928
+          },
+          "script": {
+            "requests": 9,
+            "bytes": 160296
+          },
+          "font": {
+            "requests": 3,
+            "bytes": 121512
+          },
+          "other": {
+            "requests": 12,
+            "bytes": 49689
+          },
+          "document": {
+            "requests": 1,
+            "bytes": 18346
+          },
+          "stylesheet": {
+            "requests": 1,
+            "bytes": 9297
+          },
+          "media": {
+            "requests": 0,
+            "bytes": 0
+          },
+          "third-party": {
+            "requests": 0,
+            "bytes": 0
+          }
+        }
+      },
+      "inp": {
+        "value": 80,
+        "runs": [
+          72,
+          96,
+          80,
+          80,
+          88
+        ],
+        "attribution": {
+          "target": "input.bg-card.border.border-line.focus:border-accent.h-11.outline-none.pl-10.placeholder:text-muted.pr-4.rounded-full.text-sm.w-full",
+          "type": "keyboard",
+          "inputDelay": 0,
+          "processing": 35,
+          "presentation": 45
+        }
+      },
+      "lighthouseVersion": "13.6.0",
+      "measuredAt": "2026-11-20T15:34:52.957Z"
     }
   ],
   "live": null
