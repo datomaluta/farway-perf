@@ -13,6 +13,7 @@ import type { Story } from "@/content/stories";
 
 import { SectionHeading } from "../section-heading";
 import { Reveal } from "./reveal";
+import { ChevronLeftIcon, ChevronRightIcon } from "../icons";
 
 function Arrow({ onClick, direction }: CustomArrowProps & { direction: "prev" | "next" }) {
   return (
@@ -24,10 +25,7 @@ function Arrow({ onClick, direction }: CustomArrowProps & { direction: "prev" | 
         direction === "prev" ? "-left-4" : "-right-4"
       }`}
     >
-      <i
-        className={direction === "prev" ? "fa-solid fa-chevron-left" : "fa-solid fa-chevron-right"}
-        aria-hidden="true"
-      />
+      {direction === "prev" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
     </button>
   );
 }

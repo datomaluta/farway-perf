@@ -6,6 +6,7 @@ import { useState } from "react";
 import { navLinks } from "@/lib/site";
 
 import { ThemeToggle } from "./theme-toggle";
+import { CloseIcon, CompassIcon, MenuIcon, SearchIcon } from "./icons";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -14,7 +15,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2 font-display text-2xl font-bold">
-          <i className="fa-regular fa-compass text-accent" aria-hidden="true" />
+          <CompassIcon className="text-accent" />
           Farway
         </Link>
 
@@ -36,7 +37,7 @@ export function SiteHeader() {
             className="grid size-10 place-items-center rounded-full transition-colors hover:bg-surface"
             aria-label="Search stories"
           >
-            <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
+            <SearchIcon />
           </Link>
           <ThemeToggle />
           <button
@@ -47,7 +48,7 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
-            <i className={open ? "fa-solid fa-xmark" : "fa-solid fa-bars"} aria-hidden="true" />
+            {open ? <CloseIcon /> : <MenuIcon />}
           </button>
         </div>
       </div>

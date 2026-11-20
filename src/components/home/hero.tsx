@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import type { Story } from "@/content/stories";
+import { ArrowRightIcon } from "../icons";
 
 export function Hero({ story }: { story: Story }) {
   return (
@@ -39,7 +40,7 @@ export function Hero({ story }: { story: Story }) {
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-colors hover:bg-white/85"
         >
           Read the story
-          <i className="fa-solid fa-arrow-right" aria-hidden="true" />
+          <ArrowRightIcon />
         </Link>
       </motion.div>
     </section>

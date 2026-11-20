@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { navLinks, site } from "@/lib/site";
+import { CompassIcon } from "./icons";
 
 export function SiteFooter() {
   return (
@@ -8,7 +9,7 @@ export function SiteFooter() {
       <div className="container-page grid gap-10 py-12 md:grid-cols-[2fr_1fr_1fr]">
         <div className="max-w-sm">
           <p className="flex items-center gap-2 font-display text-2xl font-bold">
-            <i className="fa-regular fa-compass text-accent" aria-hidden="true" />
+            <CompassIcon className="text-accent" />
             {site.name}
           </p>
           <p className="mt-3 text-sm text-muted">{site.description}</p>

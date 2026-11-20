@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { Reveal } from "./reveal";
+import { CheckCircleIcon, SendIcon } from "../icons";
 
 export function Newsletter() {
   const [sent, setSent] = useState(false);
@@ -21,7 +22,7 @@ export function Newsletter() {
           </p>
           {sent ? (
             <p className="mt-8 flex items-center gap-2 font-semibold" role="status">
-              <i className="fa-solid fa-circle-check text-accent" aria-hidden="true" />
+              <CheckCircleIcon className="text-accent" />
               Thanks, you&apos;re on the list. (This is a demo, so no email was sent.)
             </p>
           ) : (
@@ -46,7 +47,7 @@ export function Newsletter() {
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-accent px-6 font-semibold text-accent-ink transition-colors hover:bg-accent-hover"
               >
                 Subscribe
-                <i className="fa-solid fa-paper-plane" aria-hidden="true" />
+                <SendIcon />
               </button>
             </form>
           )}

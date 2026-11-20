@@ -11,14 +11,9 @@ import { regions, type Region, type Story } from "@/content/stories";
 
 import { SectionHeading } from "../section-heading";
 import { Reveal } from "./reveal";
+import { MapIcon, SearchIcon, GuideIcon } from "../icons";
 
 const PAGE_SIZE = 12;
-
-const guideIcons = {
-  "getting-there": "fa-solid fa-route",
-  "where-to-stay": "fa-solid fa-bed",
-  "when-to-go": "fa-regular fa-calendar",
-};
 
 export function Archive({ stories }: { stories: Story[] }) {
   const [query, setQuery] = useState("");
@@ -70,10 +65,7 @@ export function Archive({ stories }: { stories: Story[] }) {
       <SectionHeading kicker="The archive" title="Stories & guides" id="archive-title">
         <label className="relative w-full sm:w-72">
           <span className="sr-only">Search stories and guides</span>
-          <i
-            className="fa-solid fa-magnifying-glass pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-sm text-muted"
-            aria-hidden="true"
-          />
+          <SearchIcon className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-sm text-muted" />
           <input
             type="search"
             value={query}
@@ -116,7 +108,7 @@ export function Archive({ stories }: { stories: Story[] }) {
 
       {matches.length === 0 ? (
         <div className="mt-10 rounded-2xl border border-dashed border-line px-6 py-14 text-center">
-          <i className="fa-regular fa-map text-3xl text-muted" aria-hidden="true" />
+          <MapIcon className="text-3xl text-muted" />
           <p className="mt-3 font-semibold">Nothing matches “{query}”</p>
           <p className="mt-1 text-sm text-muted">Try a place name, or clear the filters.</p>
           <button
@@ -148,7 +140,7 @@ export function Archive({ stories }: { stories: Story[] }) {
                 >
                   {entry.guide ? (
                     <span className="grid size-20 shrink-0 place-items-center rounded-xl bg-surface text-2xl text-accent sm:size-28">
-                      <i className={guideIcons[entry.guide]} aria-hidden="true" />
+                      <GuideIcon id={entry.guide} />
                     </span>
                   ) : (
                     <Image

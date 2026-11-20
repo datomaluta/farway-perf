@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { MoonIcon, SunIcon } from "./icons";
 
 const subscribe = (callback: () => void) => {
   const observer = new MutationObserver(callback);
@@ -30,7 +31,7 @@ export function ThemeToggle() {
       className="grid size-10 place-items-center rounded-full text-ink transition-colors hover:bg-surface"
       aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
     >
-      <i className={dark ? "fa-solid fa-sun" : "fa-solid fa-moon"} aria-hidden="true" />
+      {dark ? <SunIcon /> : <MoonIcon />}
     </button>
   );
 }

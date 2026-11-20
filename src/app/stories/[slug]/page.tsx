@@ -5,12 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { stories } from "@/content/stories";
-
-const guideIcons = {
-  "getting-there": "fa-solid fa-route",
-  "where-to-stay": "fa-solid fa-bed",
-  "when-to-go": "fa-regular fa-calendar",
-};
+import { GuideIcon } from "@/components/icons";
 
 export function generateStaticParams() {
   return stories.map((story) => ({ slug: story.slug }));
@@ -93,7 +88,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
             {story.guides.map((guide) => (
               <div key={guide.id} id={guide.id} className="flex gap-4">
                 <span className="grid size-10 shrink-0 place-items-center rounded-full bg-card text-accent">
-                  <i className={guideIcons[guide.id]} aria-hidden="true" />
+                  <GuideIcon id={guide.id} />
                 </span>
                 <div>
                   <h3 className="font-semibold">{guide.title}</h3>

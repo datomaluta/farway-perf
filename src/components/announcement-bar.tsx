@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { CloseIcon } from "./icons";
 
 interface Promo {
   text: string;
@@ -37,7 +38,7 @@ export function AnnouncementBar() {
           aria-label="Dismiss announcement"
           onClick={() => setDismissed(true)}
         >
-          <i className="fa-solid fa-xmark" aria-hidden="true" />
+          <CloseIcon />
         </button>
       </div>
     </div>
