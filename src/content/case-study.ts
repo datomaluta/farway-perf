@@ -19,6 +19,8 @@ export interface StepResult {
 export interface LiveResult {
   /** PageSpeed Insights run on the deployed site */
   url: string;
+  /** Shareable PageSpeed Insights report */
+  reportUrl: string;
   measuredAt: string;
   mobile: { score: number; metrics: LabRun["metrics"] };
   desktop: { score: number; metrics: LabRun["metrics"] };

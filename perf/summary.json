@@ -1717,5 +1717,56 @@
       "measuredAt": "2026-11-20T15:34:52.957Z"
     }
   ],
-  "live": null
+  "live": {
+    "before": {
+      "url": "https://farway-perf-before.vercel.app/",
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-farway-perf-before-vercel-app/hrzvq5a6gk",
+      "measuredAt": "2026-11-20T19:40:27+04:00",
+      "mobile": {
+        "score": 63,
+        "metrics": {
+          "fcp": 800,
+          "lcp": 24400,
+          "tbt": 270,
+          "cls": 0.032,
+          "si": 7100
+        }
+      },
+      "desktop": {
+        "score": 62,
+        "metrics": {
+          "fcp": 200,
+          "lcp": 3600,
+          "tbt": 280,
+          "cls": 0.108,
+          "si": 2100
+        }
+      }
+    },
+    "after": {
+      "url": "https://farway-perf.vercel.app/",
+      "reportUrl": "https://pagespeed.web.dev/analysis/https-farway-perf-vercel-app/hj8vtzkr81",
+      "measuredAt": "2026-11-20T19:41:51+04:00",
+      "mobile": {
+        "score": 92,
+        "metrics": {
+          "fcp": 1200,
+          "lcp": 3000,
+          "tbt": 70,
+          "cls": 0,
+          "si": 4300
+        }
+      },
+      "desktop": {
+        "score": 100,
+        "metrics": {
+          "fcp": 300,
+          "lcp": 600,
+          "tbt": 20,
+          "cls": 0,
+          "si": 600
+        }
+      }
+    }
+  }
 }

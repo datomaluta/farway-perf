@@ -129,7 +129,9 @@ const metricRows: MetricRow[] = [
 function deltas(prev: StepResult, cur: StepResult) {
   const items: { label: string; from: string; to: string }[] = [];
   const add = (label: string, a: number, b: number, fmt: (v: number) => string, min: number) => {
-    if (Math.abs(a - b) >= min) items.push({ label, from: fmt(a), to: fmt(b) });
+    // Skip changes that are within noise or that look identical once formatted.
+    if (Math.abs(a - b) < min || fmt(a) === fmt(b)) return;
+    items.push({ label, from: fmt(a), to: fmt(b) });
   };
   add("Mobile score", prev.mobile.score, cur.mobile.score, String, 2);
   add("LCP", prev.mobile.metrics.lcp, cur.mobile.metrics.lcp, formatMs, 150);
@@ -150,6 +152,8 @@ function deltas(prev: StepResult, cur: StepResult) {
 
 export default function CaseStudyPage() {
   const live = results.live;
+  const lcpBefore = live ? live.before.mobile.metrics.lcp : first.mobile.metrics.lcp;
+  const lcpAfter = live ? live.after.mobile.metrics.lcp : last.mobile.metrics.lcp;
 
   return (
     <div className="pb-8">
@@ -160,9 +164,8 @@ export default function CaseStudyPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted">
           Farway started out like many sites I&apos;m asked to speed up: it looked fine, but it took{" "}
-          {formatMs(first.mobile.metrics.lcp)} to show its cover photo on a mid-range phone. Twelve
-          focused changes later, the same page, with the same design and content, loads in{" "}
-          {formatMs(last.mobile.metrics.lcp)}.
+          {formatMs(lcpBefore)} to show its cover photo on a mid-range phone. Twelve focused changes
+          later, the same page, with the same design and content, loads in {formatMs(lcpAfter)}.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm font-semibold">
           <a
@@ -210,9 +213,21 @@ export default function CaseStudyPage() {
           })}
         </div>
         <p className="mt-4 text-center text-xs text-muted">
-          {live
-            ? `PageSpeed Insights on the live before and after deployments, ${new Date(live.after.measuredAt).toLocaleDateString("en-US", { month: "long", year: "numeric" })}.`
-            : "Lighthouse lab runs, median of five."}{" "}
+          {live ? (
+            <>
+              PageSpeed Insights on the live deployments, November 2026:{" "}
+              <a href={live.before.reportUrl} className="underline hover:text-ink">
+                before report
+              </a>
+              ,{" "}
+              <a href={live.after.reportUrl} className="underline hover:text-ink">
+                after report
+              </a>
+              .
+            </>
+          ) : (
+            "Lighthouse lab runs, median of five."
+          )}{" "}
           Details in the methodology below.
         </p>
       </section>
