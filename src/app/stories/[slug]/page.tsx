@@ -1,10 +1,10 @@
-import moment from "moment";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { stories } from "@/content/stories";
+import { formatDate } from "@/lib/format";
 import { GuideIcon } from "@/components/icons";
 
 export function generateStaticParams() {
@@ -37,8 +37,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg text-pretty text-muted">{story.dek}</p>
         <p className="mt-5 text-sm text-muted">
-          By {story.author} · {moment(story.publishedAt).format("MMMM D, YYYY")} ·{" "}
-          {story.readMinutes} min read
+          By {story.author} · {formatDate(story.publishedAt, "long")} · {story.readMinutes} min read
         </p>
       </header>
 

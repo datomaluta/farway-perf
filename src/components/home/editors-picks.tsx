@@ -1,6 +1,5 @@
 "use client";
 
-import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -10,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import type { Story } from "@/content/stories";
+import { formatDate } from "@/lib/format";
 
 import { SectionHeading } from "../section-heading";
 import { Reveal } from "./reveal";
@@ -78,8 +78,7 @@ export function EditorsPicks({ stories }: { stories: Story[] }) {
                     </h3>
                     <p className="mt-2 line-clamp-2 text-sm text-muted">{story.dek}</p>
                     <p className="mt-4 text-xs text-muted">
-                      {moment(story.publishedAt).format("MMM D, YYYY")} · {story.readMinutes} min
-                      read
+                      {formatDate(story.publishedAt)} · {story.readMinutes} min read
                     </p>
                   </div>
                 </Link>

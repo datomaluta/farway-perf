@@ -1,13 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import _ from "lodash";
-import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 import { regions, type Region, type Story } from "@/content/stories";
+import { formatDate } from "@/lib/format";
 
 import { SectionHeading } from "../section-heading";
 import { Reveal } from "./reveal";
@@ -20,8 +19,8 @@ export function Archive({ stories }: { stories: Story[] }) {
   const [region, setRegion] = useState<Region | "all">("all");
   const [visible, setVisible] = useState(PAGE_SIZE);
 
-  const entries = _.orderBy(
-    _.flatMap(stories, (story) => [
+  const entries = stories
+    .flatMap((story) => [
       {
         key: story.slug,
         kind: "Story",
@@ -33,7 +32,7 @@ export function Archive({ stories }: { stories: Story[] }) {
         publishedAt: story.publishedAt,
         readMinutes: story.readMinutes,
       },
-      ..._.map(story.guides, (guide) => ({
+      ...story.guides.map((guide) => ({
         key: `${story.slug}-${guide.id}`,
         kind: "Guide",
         guide: guide.id,
@@ -44,21 +43,22 @@ export function Archive({ stories }: { stories: Story[] }) {
         publishedAt: guide.publishedAt,
         readMinutes: 2,
       })),
-    ]),
-    ["publishedAt"],
-    ["desc"],
-  );
+    ])
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
-  const counts = _.countBy(entries, (entry) => entry.story.region);
-  const words = _.words(_.toLower(query));
-  const matches = _.filter(entries, (entry) => {
+  const counts: Partial<Record<Region, number>> = {};
+  for (const entry of entries) {
+    counts[entry.story.region] = (counts[entry.story.region] ?? 0) + 1;
+  }
+  const words = query.toLowerCase().split(/s+/).filter(Boolean);
+  const matches = entries.filter((entry) => {
     if (region !== "all" && entry.story.region !== region) return false;
-    const haystack = _.toLower(
-      [entry.title, entry.summary, entry.story.place, entry.story.country].join(" "),
-    );
-    return _.every(words, (word) => _.includes(haystack, word));
+    const haystack = [entry.title, entry.summary, entry.story.place, entry.story.country]
+      .join(" ")
+      .toLowerCase();
+    return words.every((word) => haystack.includes(word));
   });
-  const shown = _.take(matches, visible);
+  const shown = matches.slice(0, visible);
 
   return (
     <Reveal id="stories" className="container-page pt-20" labelledBy="archive-title">
@@ -158,8 +158,7 @@ export function Archive({ stories }: { stories: Story[] }) {
                     <h3 className="mt-1 leading-snug font-semibold">{entry.title}</h3>
                     <p className="mt-1 line-clamp-2 text-sm text-muted">{entry.summary}</p>
                     <p className="mt-2 text-xs text-muted">
-                      {moment(entry.publishedAt).format("MMM D, YYYY")} · {entry.readMinutes} min
-                      read
+                      {formatDate(entry.publishedAt)} · {entry.readMinutes} min read
                     </p>
                   </div>
                 </Link>

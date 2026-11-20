@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 
 import type { Story } from "@/content/stories";
+import { formatDate } from "@/lib/format";
 import { ArrowRightIcon } from "../icons";
 
 export function Hero({ story }: { story: Story }) {
@@ -32,8 +32,7 @@ export function Hero({ story }: { story: Story }) {
         </h1>
         <p className="mt-5 max-w-2xl text-lg text-pretty text-white/85 sm:text-xl">{story.dek}</p>
         <p className="mt-5 text-sm text-white/75">
-          By {story.author} · {moment(story.publishedAt).format("MMM D, YYYY")} ·{" "}
-          {story.readMinutes} min read
+          By {story.author} · {formatDate(story.publishedAt)} · {story.readMinutes} min read
         </p>
         <Link
           href={`/stories/${story.slug}`}
