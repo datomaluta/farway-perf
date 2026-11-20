@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   description:
     "How a slow Next.js travel magazine went from failing Core Web Vitals to a fast, fully green PageSpeed report, one measured fix at a time.",
   alternates: { canonical: "/case-study" },
+  openGraph: {
+    type: "article",
+    title: "Making a slow Next.js site fast: a performance case study",
+    description:
+      "Twelve measured fixes took a Next.js site from 63 to 92 on mobile PageSpeed Insights and from 62 to 100 on desktop.",
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
+  },
 };
 
 const byId = new Map(results.steps.map((r) => [r.id, r]));

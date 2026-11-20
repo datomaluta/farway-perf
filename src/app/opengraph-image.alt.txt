@@ -1,0 +1,1 @@
+Farway performance case study: mobile PageSpeed score from 63 to 92 after 12 measured fixes
