@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f4ef;
+  --surface: #ece8df;
+  --card: #fffefb;
+  --ink: #15191c;
+  --muted: #5d6468;
+  --line: #ddd8cd;
+  --accent: #0d6b5b;
+  --accent-hover: #0a5649;
+  --accent-ink: #ffffff;
+  --ring: #0d6b5b;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0e1315;
+  --surface: #172022;
+  --card: #131a1c;
+  --ink: #edf0ee;
+  --muted: #9aa5a6;
+  --line: #263133;
+  --accent: #4cc3aa;
+  --accent-hover: #6fd3bd;
+  --accent-ink: #062621;
+  --ring: #4cc3aa;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
